@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap');
+
+$yellow : #FAFD7CFF;
+$brown: #82391EFF;
+$dark-blue : #24325FFF;
+$light-blue: #B7E4F9FF;
+$blue: #59C8ECFF;
+$light-teal: #A6EEE6FF;
+$red: #FB6466FF;
+$green : #526E2DFF;
+$pink: #e762D7FF;
+$orange: #e89242FF;
+$sandy : #FAE48BFF;
+$light-brown : #917C5DFF;
+
+body {
+    margin: 0px;
+}
+.text-bold{
+    font-weight: 700;
+}
+
+h1, h2{
+    font-family: 'Creepster', cursive, Arial Black;
+}
+*{
+    font-family: 'Rajdhani', sans-serif;
+
+}
