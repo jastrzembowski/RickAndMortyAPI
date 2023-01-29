@@ -10,15 +10,16 @@
   width: 100%;
   overflow: hidden;
   z-index: 2;
-  .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+  .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
     background-color: $yellow;
     padding: 15px;
     color: black;
-font-weight: 600;
-border: none;
-&:hover{
-    background-color: $pink;
-}}
+    font-weight: 600;
+    border: none;
+    &:hover {
+      background-color: $pink;
+    }
+  }
 }
 
 .wrapper {
@@ -76,4 +77,3 @@ border: none;
     }
   }
 }
-

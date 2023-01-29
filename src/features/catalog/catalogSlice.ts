@@ -19,11 +19,10 @@ interface CatalogState {
   results: Character[];
   filterBy: FilterBy;
   filtersLoaded: boolean;
-  page?: number
+  page?: number;
 }
 
-const charactersAdapter = createEntityAdapter<Response>({
-});
+const charactersAdapter = createEntityAdapter<Response>({});
 
 function getAxiosParams(filterBy: FilterBy) {
   const params = new URLSearchParams();
@@ -55,13 +54,10 @@ export const fetchCharacterAsync = createAsyncThunk<Response, number>(
     try {
       return await agent.Catalog.details(id);
     } catch (error: any) {
-      if (thunkAPI.rejectWithValue({ error: error.data }))
-      return
+      if (thunkAPI.rejectWithValue({ error: error.data })) return;
     }
   }
 );
-
-
 
 export const catalogSlice = createSlice({
   name: "catalog",
@@ -80,17 +76,15 @@ export const catalogSlice = createSlice({
     },
     setPageNum: (state, action) => {
       state.charactersLoaded = false;
-      state.filterBy = { ...state.filterBy, ...action.payload};
+      state.filterBy = { ...state.filterBy, ...action.payload };
     },
-
   },
   extraReducers: (builder) => {
     builder.addCase(fetchCharactersAsync.pending, (state) => {
       state.appStatus = "pendingFetchCharacters";
     });
     builder.addCase(fetchCharactersAsync.fulfilled, (state, action) => {
-      console.log(action);
-      charactersAdapter.setOne(state, action.payload)
+      charactersAdapter.setOne(state, action.payload);
       state.appStatus = "idle";
       state.charactersLoaded = true;
     });

@@ -17,7 +17,7 @@ import LoadingComponent from "./LoadingComponent";
 export default function Catalog() {
   const catalog = useAppSelector(characterSelectors.selectAll);
   const [page, setPage] = useState(1);
-  const [filters, setFilters] = useState(false)
+  const [filters, setFilters] = useState(false);
 
   const { charactersLoaded, filterBy } = useAppSelector(
     (state) => state.catalog
@@ -47,8 +47,6 @@ export default function Catalog() {
     window.scrollTo(0, 0);
   };
 
-
-
   return (
     <div className="main-container">
       <div className="catalog-container">
@@ -77,8 +75,7 @@ export default function Catalog() {
             <SearchSpeciesComponent />
           </div>
         </aside>
-{filters && 
-
+        {filters && (
           <div className="filter-box media">
             <h1>Filter characteres</h1>
             <h3>Search by name</h3>
@@ -102,31 +99,31 @@ export default function Catalog() {
             <h3>Search by species</h3>
             <SearchSpeciesComponent />
           </div>
+        )}
 
-
-            }
-
-            <Button onClick={()=> setFilters(!filters)} className="media">
-              {!filters ? "Show filters" : "Hide filters" }</Button>
+        <Button onClick={() => setFilters(!filters)} className="media">
+          {!filters ? "Show filters" : "Hide filters"}
+        </Button>
         {!charactersLoaded ? (
           <LoadingComponent />
         ) : (
           <div className="cards-container">
-          <div className="cards-box">
-            {charactersLoaded &&
-              Object.entries(catalog[0].results).map((result) => (
-                <CharacterCard result={result[1]} key={result[0]} />
-              ))}     </div>
+            <div className="cards-box">
+              {charactersLoaded &&
+                Object.entries(catalog[0].results).map((result) => (
+                  <CharacterCard result={result[1]} key={result[0]} />
+                ))}{" "}
+            </div>
             {charactersLoaded && (
               <Pagination
                 size="large"
                 count={catalog[0].info.pages}
-                style={{alignSelf: "center"}}
+                style={{ alignSelf: "center" }}
                 page={page}
                 onChange={handleChange}
               />
             )}
-     </div>
+          </div>
         )}
       </div>
     </div>

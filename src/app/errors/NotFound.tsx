@@ -13,7 +13,6 @@ export default function NotFound() {
           To character list
         </Button>
       </div>
-      
     </div>
   );
 }

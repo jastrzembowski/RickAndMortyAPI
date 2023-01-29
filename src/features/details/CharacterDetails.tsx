@@ -26,7 +26,7 @@ export default function CharacterDetails() {
     if (result === undefined) dispatch(fetchCharacterAsync(parseInt(id!)));
   }, [id, result, dispatch]);
 
-  if (!result && characterStatus==="idle") return <NotFound />;
+  if (!result && characterStatus === "idle") return <NotFound />;
 
   return (
     <article className="character-details__container">
@@ -67,8 +67,8 @@ export default function CharacterDetails() {
               </a>
             </div>{" "}
             <Button className="mobile" component={Link} to="/">
-            Return to list
-          </Button>
+              Return to list
+            </Button>
           </div>
         </div>
       </div>
