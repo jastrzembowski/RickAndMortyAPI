@@ -16,16 +16,7 @@
   padding: 10px;
   width: 80%;
   min-width: 1150px;
-  .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-    border: 2px solid black !important;
-    background-color: $blue !important;
-    font-weight: 600 !important;
-    width: 150px !important;
-    margin-top: 10px !important;
-    &:hover {
-      background-color: $pink !important;
-    }
-  }
+
   .desktop {
     display: block;
   }
@@ -42,17 +33,7 @@
       h2 {
         margin: 10px 0px;
       }
-      .css-2y464i-MuiInputBase-root-MuiFilledInput-root:after {
-        border-bottom: black;
-      }
-      .css-o943dk-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
-        font-family: "Rajdhani", sans-serif;
-        color: black;
-      }
-      .css-e4w4as-MuiFormLabel-root-MuiInputLabel-root {
-        font-family: "Rajdhani", sans-serif;
-        font-size: 18px;
-      }
+     
     }
   }
   .cards-container {
@@ -127,11 +108,7 @@
   .catalog-container {
     display: flex;
     flex-direction: column;
-    .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-      align-self: flex-end;
-      margin-right: 20px;
-      color: black;
-    }
+  
 
     .desktop {
       display: none;
@@ -151,11 +128,7 @@
       border-radius: 15px;
       z-index: 2;
     }
-    .character-box {
-      .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-        align-self: baseline;
-      }
-    }
+    
   }
 }
 
@@ -176,11 +149,7 @@
       }
       div {
         align-items: center;
-        .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-          align-self: center;
-          margin: 0px;
-          margin-top: 10px;
-        }
+       
       }
     }
   }

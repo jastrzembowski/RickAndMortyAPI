@@ -16,7 +16,7 @@ export default function CharacterCard({ result }: Props) {
             className="circle"
             style={{
               backgroundColor:
-                (result.status === "Alive" &&  "#526E2DFF") ||
+                (result.status === "Alive" && "#526E2DFF") ||
                 (result.status === "Dead" && "rgb(162, 5, 7)") ||
                 (result.status === "unknown" && "#B7E4F9FF") ||
                 "",
@@ -31,7 +31,22 @@ export default function CharacterCard({ result }: Props) {
         </p>
         <p className="text-bold">Last known location :</p>
         <p> {result.location.name}</p>
-       <Button component={Link} to={`/${result.id}`}>See more</Button>
+        <Button
+          sx={{
+            border: "2px solid black",
+            backgroundColor: "#59c8ec",
+            fontWeight: 600,
+            width: "150px",
+            marginTop: "10px",
+            "&:hover": {
+              backgroundColor: "#e762d7",
+            },
+          }}
+          component={Link}
+          to={`/${result.id}`}
+        >
+          See more
+        </Button>
       </div>
     </div>
   );

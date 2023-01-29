@@ -34,7 +34,25 @@ export default function CharacterDetails() {
         <div className="image-box">
           {" "}
           <img src={character.image} alt={character.name} />
-          <Button className="desktop" component={Link} to="/">
+          <Button
+            sx={{
+              border: "2px solid black",
+              backgroundColor: "#fae48b",
+              fontWeight: 600,
+              width: "150px",
+              margin: "30px",
+              color: "black",
+              padding: "10px",
+              textAlign: "center",
+              marginBottom: "40px",
+              "&:hover": {
+                backgroundColor: "#fb6466",
+              },
+            }}
+            className="desktop"
+            component={Link}
+            to="/"
+          >
             Return to list
           </Button>
         </div>{" "}
@@ -66,7 +84,25 @@ export default function CharacterDetails() {
                 {character.url}
               </a>
             </div>{" "}
-            <Button className="mobile" component={Link} to="/">
+            <Button
+              sx={{
+                border: "2px solid black",
+                backgroundColor: "#fae48b",
+                fontWeight: 600,
+                width: "150px",
+                margin: "30px",
+                color: "black",
+                padding: "10px",
+                textAlign: "center",
+                marginBottom: "40px",
+                "&:hover": {
+                  backgroundColor: "#fb6466",
+                },
+              }}
+              className="mobile"
+              component={Link}
+              to="/"
+            >
               Return to list
             </Button>
           </div>

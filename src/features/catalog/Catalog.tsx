@@ -101,7 +101,19 @@ export default function Catalog() {
           </div>
         )}
 
-        <Button onClick={() => setFilters(!filters)} className="media">
+        <Button sx={{
+            border: "2px solid black",
+            backgroundColor: "#59c8ec",
+            fontWeight: 600,
+            width: "150px",
+            marginTop: "10px",
+            alignSelf: "flex-end",
+            marginRight: "20px",
+            color: "black",
+            "&:hover": {
+              backgroundColor: "#e762d7",
+            },
+          }} onClick={() => setFilters(!filters)} className="media">
           {!filters ? "Show filters" : "Hide filters"}
         </Button>
         {!charactersLoaded ? (
